@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Markdown Editor</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        #editor,
+        #preview {
+            width: 45%;
+            height: 400px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            margin: 10px;
+        }
+
+        #preview {
+            overflow-y: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <textarea id="editor" placeholder="Enter your markdown here..."></textarea>
+    <div id="preview"></div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/2.0.3/marked.min.js"></script>
+    <script>
+        const editor = document.getElementById('editor');
+        const preview = document.getElementById('preview');
+        editor.addEventListener('input', () => {
+            preview.innerHTML = marked(editor.value);
+        });    
+    </script>
+</body>
+
+</html>
