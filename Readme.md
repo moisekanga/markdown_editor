@@ -1,4 +1,4 @@
-﻿# This is my markdown text editor.
+﻿# This is my markdown text editor for legal documents.
 * This editor will be used for writing legal documents.
 
 ## Tech Stack used
